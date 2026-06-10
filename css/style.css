@@ -26,7 +26,6 @@
 
 /* ----- Resets ----- */
 
-
 *{
     margin:0;
     padding:0;
@@ -40,12 +39,13 @@ html{
     scrollbar-color:#B89B72 #FAF7F2;
 }
 
-body{
-    font-family:'Inter',sans-serif;
-    background:var(--bg);
-    color:var(--text);
-    line-height:1.7;
-    overflow-x: hidden;
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    overflow-x: hidden; /* <--- Agrega esto para congelar el ancho de la pantalla */
+    width: 100%;
 }
 
 img{
@@ -99,7 +99,8 @@ h3{
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width:100%;
+    overflow:hidden;
     z-index: 1000;
 }
 
@@ -283,16 +284,28 @@ body.menu-open{
 
     .navbar{
 
+        width:100%;
+
+        max-width:100%;
+
         justify-content:center;
 
-        padding:15px 20px;
+        padding:15px;
 
         position:relative;
     }
 
     .logo{
 
-        margin:0;
+        max-width:220px;
+        margin: 0;
+    }
+
+    .logo-tagline{
+
+        letter-spacing:2px;
+
+        font-size:.38rem;
     }
 
     .logo .na,
@@ -763,6 +776,18 @@ body.menu-open{
     right:-25px;
 }
 
+@media(max-width:768px){
+
+    .prev-btn{
+        left:10px;
+    }
+
+    .next-btn{
+        right:10px;
+    }
+
+}
+
 /* ----- Beneficios ----- */
 
 .benefits{
@@ -1052,25 +1077,50 @@ body.menu-open{
 }
 
 @media(max-width:768px){
-    /* Ajustes Navbar Móvil */
-    .navbar{
-        flex-direction: column;
-        gap: 15px;
-        padding: 15px;
+
+    /* Ocultamos los menús de escritorio por completo para que no ocupen espacio */
+    .nav-left,
+    .nav-right {
+        display: none !important; 
     }
-    
-    .nav-left, .nav-right {
-        justify-content: center;
-        gap: 20px;
+
+    /* Evitamos que el navbar acumule paddings grandes que rompan la pantalla */
+    .navbar {
         width: 100%;
+        max-width: 100%;
+        padding: 15px 20px; /* Reducido para pantallas pequeñas */
+        display: flex;
+        justify-content: center; /* Centra el logo perfectamente */
+        align-items: center;
+        position: relative;
+    }
+
+    /* Botón de menú móvil con posición absoluta para no empujar al logo */
+    .mobile-menu-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 45px;
+        height: 45px;
+        z-index: 1001;
     }
 
     .logo {
-        margin: 5px 0;
-        order: -1; /* El logo se mantiene arriba con estilo */
+        max-width: 220px;
+        margin: 0; /* Eliminamos márgenes laterales que causaban desborde */
     }
 
-    .logo .na, .logo .lu {
+    .logo-tagline {
+        letter-spacing: 2px;
+        font-size: .38rem;
+    }
+
+    .logo .na,
+    .logo .lu {
         font-size: 2.8rem;
     }
 
@@ -1078,9 +1128,9 @@ body.menu-open{
         height: 55px;
     }
 
-    /* Modificación en Scroll para celular */
+    /* Ajuste en Scroll para celular */
     .hero-header.scrolled .navbar {
-        padding: 10px 15px;
+        padding: 10px 20px;
     }
     
     .hero-header.scrolled .logo .na,
@@ -1091,21 +1141,25 @@ body.menu-open{
         height: 40px;
     }
 
+    .hero-header.scrolled .mobile-menu-btn {
+        color: #1A1A1A;
+    }
+
     /* Secciones Globales */
-    .hero h1{
-        font-size:2.8rem;
+    .hero h1 {
+        font-size: 2.8rem;
     }
     .hero p {
         font-size: 0.95rem;
         padding: 0 15px;
     }
 
-    .section-heading h2{
-        font-size:2.6rem;
+    .section-heading h2 {
+        font-size: 2.6rem;
     }
 
-    .categories-grid{
-        grid-template-columns:1fr;
+    .categories-grid {
+        grid-template-columns: 1fr;
         gap: 15px;
     }
     
@@ -1114,28 +1168,39 @@ body.menu-open{
     }
 
     .products-btn {
-        display: none; /* En móviles Swiper se controla de forma táctil (swipe) */
+        display: none; 
     }
 
-    .benefits-grid{
+    .benefits-grid {
         grid-template-columns: 1fr;
         gap: 40px;
+    }
+
+    .about-container {
+        grid-template-columns: 1fr !important; /* Fuerza a que se ponga uno abajo del otro */
+        gap: 30px !important; /* Reduce el espacio que empuja hacia afuera */
+        width: 100%;
+    }
+
+    .about-image img {
+        max-width: 100%;
+        height: auto;
     }
 
     .socials h2 {
         font-size: 2.8rem;
     }
+
+    /* Evita que los contenedores de animaciones deformen el ancho */
+    .about, .benefits, .socials {
+        overflow: hidden;
+    }
 }
 
 @media (max-width: 480px) {
-    .navbar a {
-        font-size: 0.85rem;
-    }
-    .nav-left, .nav-right {
-        gap: 12px;
-    }
+    /* Eliminamos las referencias a .nav-left y .navbar a ya que están ocultas */
     .hero h1 {
-        font-size: 2.3rem;
+        font-size: 2.1rem; /* Un poco más pequeño para evitar saltos de línea bruscos */
     }
     .section-heading h2 {
         font-size: 2.2rem;
