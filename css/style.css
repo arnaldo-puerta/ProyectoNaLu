@@ -26,40 +26,7 @@
 
 /* ----- Resets ----- */
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
 
-html{
-    scroll-behavior:smooth;
-        
-    scrollbar-width:thin;
-    scrollbar-color:#B89B72 #FAF7F2;
-}
-
-body{
-    font-family:'Inter',sans-serif;
-    background:var(--bg);
-    color:var(--text);
-    line-height:1.7;
-    overflow-x: hidden;
-}
-
-img{
-    width:100%;
-    display:block;
-}
-
-a{
-    text-decoration:none;
-    color:inherit;
-}
-
-ul{
-    list-style:none;
-}
 
 /* ----- Contenedor ----- */
 
