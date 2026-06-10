@@ -1,6 +1,28 @@
 /* ----- Paleta de Colores ----- */
 
+:root {
+    --bg: #FAF7F2;
+    --bg-secondary: #F5F2EE;
 
+    --white: #FFFFFF;
+
+    --text: #1A1A1A;
+    --text-light: #6B6B6B;
+
+    --border: #E6DED4;
+
+    --accent: #B89B72;
+    --accent-hover: #A68A63;
+
+    --radius: 16px;
+
+    --transition: .3s ease;
+
+    --shadow:
+        0 8px 25px rgba(0,0,0,.05);
+
+    --container: 1200px;
+}
 
 /* ----- Resets ----- */
 
