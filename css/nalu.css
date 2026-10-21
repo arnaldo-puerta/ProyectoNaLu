@@ -34,7 +34,7 @@
     --max: 1240px;
     --r-sm: 10px;
     --r-md: 16px;
-    --arco: 999px 999px var(--r-md) var(--r-md);   /* forma de vela / nicho */
+    --r-foto: 12px;   /* esquinas de las fotos */
 
     --header-h: 72px;
     --ease: cubic-bezier(.2, .7, .2, 1);
@@ -563,7 +563,7 @@ body.bloqueado{
     color: var(--miel-osc);
 }
 
-/* ----- Colecciones (formas de arco) ----- */
+/* ----- Colecciones ----- */
 
 .colecciones{
     display: grid;
@@ -586,9 +586,9 @@ body.bloqueado{
 }
 
 .coleccion figure{
-    aspect-ratio: 3 / 4;
+    aspect-ratio: 1 / 1;
     overflow: hidden;
-    border-radius: var(--arco);
+    border-radius: var(--r-foto);
     background: var(--lino);
 }
 
@@ -673,9 +673,9 @@ body.bloqueado{
     position: relative;
     display: block;
     width: 100%;
-    aspect-ratio: 4 / 5;
+    aspect-ratio: 1 / 1;
     overflow: hidden;
-    border-radius: var(--arco);
+    border-radius: var(--r-foto);
     background: var(--lino);
 }
 
@@ -822,7 +822,7 @@ body.bloqueado{
     margin-inline: auto;
     aspect-ratio: 4 / 5;
     overflow: hidden;
-    border-radius: var(--arco);
+    border-radius: var(--r-foto);
 }
 
 .nosotros figure img{
@@ -1200,9 +1200,9 @@ body.bloqueado{
 
 .renglon img{
     width: 64px;
-    height: 80px;
+    height: 64px;
     object-fit: cover;
-    border-radius: 999px 999px 8px 8px;
+    border-radius: 8px;
 }
 
 .renglon h3{
