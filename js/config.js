@@ -9,6 +9,6 @@
    ========================================================================== */
 
 window.NALU_SUPABASE = {
-  url: "ggmpcfgrsatiuvlbmguf", // ej. "https://abcdefghijkl.supabase.co"
+  url: "https://ggmpcfgrsatiuvlbmguf.supabase.co", // ej. "https://abcdefghijkl.supabase.co"
   clave: "sb_publishable_3MdRt2AB77n-8d1Gov0RHw_ePWvNa22", // la "Publishable key" (sb_publishable_…) o la "anon key"
 };
