@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "owner": "arnaldo-puerta",
+  "repo": "ProyectoNaLu",
+  "branch": "main",
+  "token": {
+    "sal": "5Mha2fXPyIzkbu5QDo+ZYA==",
+    "iv": "mnsGc5x8a15VLBV5",
+    "iteraciones": 310000,
+    "datos": "b/KNiXBc/mQFQuaPMwX6jqCp39PMgH1p4+v2wbpnKCwkYDVXBFKpdhpoIj4Zftvt/MECqx3JI6+92HQFosDsglLupTnowlXDR1R1GPBtjiea3i/v3DbWqWDLukZvp2r0lDfaPCmwPf0Jy3X4Ng=="
+  }
+}
