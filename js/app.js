@@ -1,6 +1,6 @@
 /* ==========================================================================
    NALU · Lógica compartida del sitio
-   - Carga el catálogo desde data/catalogo.json (lo edita el admin)
+   - Carga el catálogo desde Supabase (o data/catalogo.json de respaldo)
    - Carrito guardado en el navegador
    - Pedidos por WhatsApp (carrito completo o "Pedir ahora")
    ========================================================================== */
@@ -566,11 +566,18 @@
 
     prepararEncabezado();
 
-    const listo = fetch(BASE + "data/catalogo.json?v=" + Date.now(), { cache: "no-store" })
-        .then(r => {
-            if(!r.ok) throw new Error("HTTP " + r.status);
-            return r.json();
-        })
+    // Con Supabase configurado (js/config.js) se lee la base de datos;
+    // si no, el respaldo data/catalogo.json.
+    function cargarCatalogo(){
+        if(window.SB && SB.configurado) return SB.catalogo();
+        return fetch(BASE + "data/catalogo.json?v=" + Date.now(), { cache: "no-store" })
+            .then(r => {
+                if(!r.ok) throw new Error("HTTP " + r.status);
+                return r.json();
+            });
+    }
+
+    const listo = cargarCatalogo()
         .then(json => {
             datos = {
                 tienda: json.tienda || {},

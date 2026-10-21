@@ -648,3 +648,27 @@
     min-width: 0;
     width: 100%;
 }
+
+.guardar-fijo{
+    position: sticky;
+    bottom: 0;
+    z-index: 5;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 calc(var(--gutter) * -1) -80px;
+    padding: 12px var(--gutter) calc(12px + env(safe-area-inset-bottom));
+    background: rgba(250,246,240,.96);
+    border-top: 1px solid var(--linea);
+}
+
+.guardar-fijo .btn{
+    min-width: 200px;
+}
+
+@media (max-width: 520px){
+    .guardar-fijo .btn{ flex: 1; }
+}
+
+.admin .aviso{
+    bottom: calc(86px + env(safe-area-inset-bottom));
+}

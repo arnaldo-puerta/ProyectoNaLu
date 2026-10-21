@@ -1,0 +1,40 @@
+# Netlify: sitio estático + una función programada
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+# El admin no debe aparecer en buscadores
+[[headers]]
+  for = "/admin/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+    Cache-Control = "no-cache"
+
+# Fotos del sitio: se pueden guardar en caché mucho tiempo
+[[headers]]
+  for = "/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+# HTML, JS y CSS: revisar cambios en cada visita
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "no-cache"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "no-cache"
+
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "no-cache"
+
+# Enlace viejo de "Arreglos"
+[[redirects]]
+  from = "/paginas/productos.html"
+  to = "/paginas/coleccion.html?cat=arreglos"
+  status = 301
+  force = true
