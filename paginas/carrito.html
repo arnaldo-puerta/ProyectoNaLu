@@ -1,1 +1,163 @@
-Aqui van todos los productos que agregen los usuarios al carrito natyyyy
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Carrito | NALU</title>
+    <meta name="description" content="Revisa tu pedido y envíalo por WhatsApp.">
+    <meta name="theme-color" content="#FAF6F0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=GFS+Didot&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="../css/nalu.css">
+</head>
+<body data-base="../" data-sin-barra>
+
+    <header class="encabezado">
+        <div class="container encabezado-inner">
+
+            <div class="encabezado-izq">
+                <button class="icono-btn btn-menu" aria-label="Abrir menú" aria-expanded="false">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </button>
+                <nav class="nav" aria-label="Principal">
+                    <a href="../index.html">Inicio</a>
+                    <a href="../paginas/coleccion.html">Colección</a>
+                    <a href="../index.html#nosotros">Nosotros</a>
+                </nav>
+            </div>
+
+            <a href="../index.html" class="logo" aria-label="NALU Souvenirs, inicio">
+                <span class="logo-marca">NA<i></i>LU</span>
+                <span class="logo-sub">SOUVENIRS</span>
+            </a>
+
+            <div class="encabezado-der">
+                <nav class="nav" aria-label="Secundaria">
+                    <a href="../index.html#contacto">Contacto</a>
+                </nav>
+                <div class="acciones">
+                    <a href="#" class="icono-btn solo-escritorio" data-instagram target="_blank" rel="noopener" aria-label="Instagram" hidden>
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="../paginas/carrito.html" class="icono-btn" data-abrir-carrito aria-label="Carrito">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <span class="contador">0</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <div class="menu-movil" id="menu-movil">
+        <button class="icono-btn cerrar" aria-label="Cerrar menú">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <nav aria-label="Menú">
+            <a href="../index.html">Inicio</a>
+            <a href="../paginas/coleccion.html">Colección</a>
+            <a href="../paginas/carrito.html">Carrito</a>
+            <a href="../index.html#nosotros">Nosotros</a>
+            <a href="../index.html#contacto">Contacto</a>
+        </nav>
+        <div class="menu-enlaces enlaces" data-enlaces></div>
+    </div>
+
+    <main class="pagina">
+        <div class="container">
+
+            <header class="pagina-cabeza">
+                <h1>Tu carrito</h1>
+                <p>Revisa tu pedido, agrega tus datos y envíalo en un solo mensaje por WhatsApp.</p>
+            </header>
+
+            <div class="carrito-pagina">
+
+                <section class="caja" aria-labelledby="t-productos">
+                    <div class="caja-cabeza">
+                        <h2 id="t-productos">Productos</h2>
+                        <button type="button" class="quitar" id="vaciar" hidden>Vaciar carrito</button>
+                    </div>
+                    <div id="lista" data-error-catalogo></div>
+                </section>
+
+                <form class="caja formulario" id="pedido" autocomplete="on">
+                    <h2>Datos del pedido</h2>
+
+                    <div class="campo">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="¿A nombre de quién?" autocomplete="name">
+                    </div>
+
+                    <fieldset class="campo campo--grupo">
+                        <legend>Entrega</legend>
+                        <div class="opciones">
+                            <label class="opcion">
+                                <input type="radio" name="entrega" value="Recoger en punto de entrega">
+                                <span>Recoger</span>
+                            </label>
+                            <label class="opcion">
+                                <input type="radio" name="entrega" value="Envío a domicilio">
+                                <span>Envío a domicilio</span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <div class="campo" id="campo-direccion" hidden>
+                        <label for="direccion">Dirección</label>
+                        <input type="text" id="direccion" name="direccion" placeholder="Calle, número y colonia" autocomplete="street-address">
+                    </div>
+
+                    <div class="campo">
+                        <label for="fecha">Fecha deseada <small>(opcional)</small></label>
+                        <input type="date" id="fecha" name="fecha">
+                    </div>
+
+                    <div class="campo">
+                        <label for="notas">Notas <small>(opcional)</small></label>
+                        <textarea id="notas" name="notas" placeholder="Colores, aroma, mensaje de la tarjeta…"></textarea>
+                    </div>
+
+                    <div class="total">
+                        <span>Total</span>
+                        <strong id="total">$0 MXN</strong>
+                    </div>
+
+                    <button type="submit" class="btn btn--wa btn--bloque" id="enviar" disabled>
+                        <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                        Enviar pedido por WhatsApp
+                    </button>
+
+                    <p class="nota">Se abre WhatsApp con tu pedido escrito. Te confirmamos disponibilidad y forma de pago.</p>
+                </form>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="pie">
+        <div class="container">
+            <a href="../index.html" class="logo" aria-label="NALU Souvenirs">
+                <span class="logo-marca">NA<i></i>LU</span>
+                <span class="logo-sub">SOUVENIRS</span>
+            </a>
+            <nav class="pie-nav" aria-label="Pie de página">
+                <a href="../index.html">Inicio</a>
+                <a href="../paginas/coleccion.html">Colección</a>
+                <a href="../paginas/carrito.html">Carrito</a>
+                <a href="../index.html#nosotros">Nosotros</a>
+                <a href="../index.html#contacto">Contacto</a>
+            </nav>
+            <div class="pie-redes" data-redes></div>
+            <small>© 2026 NALU Souvenirs · Velas aromáticas artesanales hechas en Chihuahua</small>
+        </div>
+    </footer>
+
+    <script src="../js/app.js"></script>
+    <script src="../js/carrito.js"></script>
+</body>
+</html>

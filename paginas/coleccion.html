@@ -1,1 +1,122 @@
-Holaaa Aqui Van Las Categorias
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Colección | NALU</title>
+    <meta name="description" content="Catálogo de velas aromáticas, home sprays y arreglos de NALU.">
+    <meta name="theme-color" content="#FAF6F0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=GFS+Didot&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="../css/nalu.css">
+</head>
+<body data-base="../">
+
+    <header class="encabezado">
+        <div class="container encabezado-inner">
+
+            <div class="encabezado-izq">
+                <button class="icono-btn btn-menu" aria-label="Abrir menú" aria-expanded="false">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </button>
+                <nav class="nav" aria-label="Principal">
+                    <a href="../index.html">Inicio</a>
+                    <a href="../paginas/coleccion.html" aria-current="page">Colección</a>
+                    <a href="../index.html#nosotros">Nosotros</a>
+                </nav>
+            </div>
+
+            <a href="../index.html" class="logo" aria-label="NALU Souvenirs, inicio">
+                <span class="logo-marca">NA<i></i>LU</span>
+                <span class="logo-sub">SOUVENIRS</span>
+            </a>
+
+            <div class="encabezado-der">
+                <nav class="nav" aria-label="Secundaria">
+                    <a href="../index.html#contacto">Contacto</a>
+                </nav>
+                <div class="acciones">
+                    <a href="#" class="icono-btn solo-escritorio" data-instagram target="_blank" rel="noopener" aria-label="Instagram" hidden>
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="../paginas/carrito.html" class="icono-btn" data-abrir-carrito aria-label="Carrito">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <span class="contador">0</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <div class="menu-movil" id="menu-movil">
+        <button class="icono-btn cerrar" aria-label="Cerrar menú">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <nav aria-label="Menú">
+            <a href="../index.html">Inicio</a>
+            <a href="../paginas/coleccion.html">Colección</a>
+            <a href="../paginas/carrito.html">Carrito</a>
+            <a href="../index.html#nosotros">Nosotros</a>
+            <a href="../index.html#contacto">Contacto</a>
+        </nav>
+        <div class="menu-enlaces enlaces" data-enlaces></div>
+    </div>
+
+    <main class="pagina">
+        <div class="container">
+
+            <header class="pagina-cabeza">
+                <h1 id="titulo-coleccion">Colección</h1>
+                <p id="subtitulo-coleccion">Velas aromáticas, home sprays y arreglos hechos a mano.</p>
+            </header>
+
+            <div class="herramientas">
+                <div class="chips" id="chips" role="group" aria-label="Filtrar por colección"></div>
+                <label class="buscador">
+                    <span class="sr-only">Buscar producto</span>
+                    <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                    <input type="search" id="buscar" placeholder="Buscar producto" autocomplete="off">
+                </label>
+            </div>
+
+            <div class="productos" id="catalogo" data-error-catalogo aria-live="polite"></div>
+
+            <section class="encargo">
+                <h2>¿Buscas algo especial?</h2>
+                <p>Personalizamos colores, aromas, tarjetas y cantidades para bodas, XV años, bautizos y cualquier ocasión.</p>
+                <button class="btn btn--wa" id="encargo">
+                    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                    Cotizar un encargo
+                </button>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="pie">
+        <div class="container">
+            <a href="../index.html" class="logo" aria-label="NALU Souvenirs">
+                <span class="logo-marca">NA<i></i>LU</span>
+                <span class="logo-sub">SOUVENIRS</span>
+            </a>
+            <nav class="pie-nav" aria-label="Pie de página">
+                <a href="../index.html">Inicio</a>
+                <a href="../paginas/coleccion.html">Colección</a>
+                <a href="../paginas/carrito.html">Carrito</a>
+                <a href="../index.html#nosotros">Nosotros</a>
+                <a href="../index.html#contacto">Contacto</a>
+            </nav>
+            <div class="pie-redes" data-redes></div>
+            <small>© 2026 NALU Souvenirs · Velas aromáticas artesanales hechas en Chihuahua</small>
+        </div>
+    </footer>
+
+    <script src="../js/app.js"></script>
+    <script src="../js/coleccion.js"></script>
+</body>
+</html>

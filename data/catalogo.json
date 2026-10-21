@@ -1,0 +1,104 @@
+{
+  "tienda": {
+    "nombre": "NALU Souvenirs",
+    "whatsapp": "",
+    "moneda": "MXN",
+    "mensajePedido": "¡Hola NALU! Me gustaría hacer el siguiente pedido:"
+  },
+  "enlaces": [
+    {
+      "id": "instagram",
+      "tipo": "instagram",
+      "etiqueta": "velasnalu_cuu",
+      "url": "https://www.instagram.com/velasnalu_cuu/"
+    },
+    {
+      "id": "facebook",
+      "tipo": "facebook",
+      "etiqueta": "NALU Velas aromáticas",
+      "url": "https://www.facebook.com/profile.php?id=61572303993239"
+    }
+  ],
+  "categorias": [
+    {
+      "id": "velas",
+      "nombre": "Velas aromáticas",
+      "imagen": "img/categories/velas.webp",
+      "descripcion": "Flores, mariposas y frascos de cera aromática para regalar o decorar."
+    },
+    {
+      "id": "aromas",
+      "nombre": "Home sprays",
+      "imagen": "img/categories/aromas.webp",
+      "descripcion": "Aromas para ambientes y textiles que se quedan en casa."
+    },
+    {
+      "id": "arreglos",
+      "nombre": "Regalos y arreglos",
+      "imagen": "img/categories/regalos.webp",
+      "descripcion": "Cajas, canastas y ramos de flores de cera hechos bajo pedido."
+    }
+  ],
+  "productos": [
+    {
+      "id": "home-spray-250",
+      "nombre": "Home Spray 250 ml",
+      "precio": 259,
+      "categoria": "aromas",
+      "imagen": "img/products/home-spray-250ml.webp",
+      "descripcion": "Aromatizante en spray para ambientes y textiles. Llena tu hogar de frescura con una fragancia duradera.",
+      "destacado": true,
+      "disponible": true
+    },
+    {
+      "id": "margarita",
+      "nombre": "Margarita",
+      "precio": 33,
+      "categoria": "velas",
+      "imagen": "img/products/margarita.webp",
+      "descripcion": "Vela aromática artesanal en forma de margarita. Ideal como souvenir o detalle para eventos.",
+      "destacado": true,
+      "disponible": true
+    },
+    {
+      "id": "ramo-margarita",
+      "nombre": "Ramo Margarita",
+      "precio": 40,
+      "categoria": "velas",
+      "imagen": "img/products/ramo-margarita.webp",
+      "descripcion": "Pequeño ramo de velas en forma de flor, envuelto a mano. Perfecto para recuerdos de fiesta.",
+      "destacado": true,
+      "disponible": true
+    },
+    {
+      "id": "mini-mariposa",
+      "nombre": "Mini Mariposa",
+      "precio": 20,
+      "categoria": "velas",
+      "imagen": "img/products/mini-mariposa.webp",
+      "descripcion": "Vela aromática en forma de mariposa. Disponible en distintos colores para combinar con tu evento.",
+      "destacado": true,
+      "disponible": true
+    },
+    {
+      "id": "canasta-floral",
+      "nombre": "Canasta Floral",
+      "precio": 375,
+      "categoria": "arreglos",
+      "imagen": "img/products/canasta-floral.webp",
+      "descripcion": "Canasta con flores de cera aromáticas y flor seca, decorada con listón. Un regalo que perfuma y emociona.",
+      "destacado": true,
+      "disponible": true
+    },
+    {
+      "id": "caja-floral-grande",
+      "nombre": "Caja Floral Grande",
+      "precio": 265,
+      "categoria": "arreglos",
+      "imagen": "img/products/caja-floral-gr.webp",
+      "descripcion": "Caja con arreglo de flores de cera aromáticas. Se puede personalizar con tarjeta y colores.",
+      "destacado": true,
+      "disponible": true
+    }
+  ]
+}
